@@ -4,7 +4,7 @@
 # systemctl para habilitar o NetworkManager
 systemctl enable NetworkManager
 
-#pacman-key --init
+pacman-key --init
 
 # systemctl enable firewalld.service
 

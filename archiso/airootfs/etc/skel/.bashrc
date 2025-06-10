@@ -26,7 +26,30 @@ alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
 alias df='df -h'                          
 alias free='free -m'                      
+
+alias ..='cd ..'
+alias ...='cd ../..'
+
 alias updatedb='sudo pacman -Sy'
 
-PS1='[\u@\h \W]\$ '
+# Actualizar todo el sistema (sin preguntas)
+alias upgrade='sudo pacman -Syu --noconfirm'
+
+# Limpiar toda la caché de paquetes (pregunta antes)
+alias clean-cache='sudo pacman -Sc'
+
+# Limpiar toda la caché sin preguntas (más agresivo)
+alias clean-cache-all='sudo pacman -Scc --noconfirm'
+
+# Buscar paquetes (alias para pacman -Ss)
+alias search='pacman -Ss'
+
+# Mostrar info de paquete
+alias pkginfo='pacman -Qi'
+
+# Mostrar paquetes instalados
+alias installed='pacman -Qe'
+
+PS1='\[\e[0;32m\][\u@\h \[\e[0;34m\]\W\[\e[0;32m\]]\$ \[\e[0m\]'
+# PS1='[\u@\h \W]\$ '
 
